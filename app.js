@@ -19,7 +19,7 @@ const port = process.env.PORT || 8000;
 
 app.use(express.json())
 
-app.get("/get", async(req,res)=>{
+app.get("/", async(req,res)=>{
     
     try{
         const waiting = await Name.find()
