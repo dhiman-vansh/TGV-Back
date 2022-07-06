@@ -19,6 +19,15 @@ const port = process.env.PORT || 8000;
 
 app.use(express.json())
 
+app.get("/",async(req,res)=>{
+    try{
+        res.send("hello its working")
+    }
+    catch(e){
+        res.send('not working '+ e)
+    }
+})
+
 app.get("/dataget", async(req,res)=>{
     
     try{
